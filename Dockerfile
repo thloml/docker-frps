@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER zhang@gmail.com
 
 
-ENV frps_version=0.27.0 \
+ENV frps_version=0.29.1 \
     frps_DIR=/usr/local/frps \
     arch=amd64
 
