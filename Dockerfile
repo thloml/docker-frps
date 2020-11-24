@@ -13,7 +13,9 @@ RUN set -ex && \
     apk add --no-cache  --virtual wget tar && \
     [ ! -d ${frps_DIR} ] && mkdir -p ${frps_DIR} && cd ${frps_DIR} && \
     wget -q  ${frps_latest} -O ${frps_latest_filename} && \
-    tar -xzf ${frps_latest_filename}
+    tar -xzf ${frps_latest_filename} && \
+    mv frp_${frps_version}_linux_${arch}/frps ${frps_DIR}/frps && \
+    rm -rf /var/cache/apk/* ~/.cache ${frps_DIR}/${frps_latest_filename} ${frps_DIR}/frp_${frps_version}_linux_${arch}
 
 VOLUME /conf
 
