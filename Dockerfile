@@ -3,7 +3,7 @@ MAINTAINER zhang@gmail.com
 
 ARG frps_version
 ARG arch=amd64
-ENV frps_version=${frps_version:-0.29.1} \
+ENV frps_version=${frps_version:-0.34.3} \
     frps_DIR=/usr/local/frps \
     arch=${arch:-amd64}
     
